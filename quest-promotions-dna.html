@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest Promotions DNA - Masterclass of the Month</title>
+    <style>
+        :root {
+            --primary: #1e293b;
+            --primary-light: #334155;
+            --accent: #E3A34C;
+            --accent-light: #fef3c7;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --gray-light: #94a3b8;
+            --border: #e2e8f0;
+            --member: #10b981;
+            --member-light: #d1fae5;
+            --non-member: #7c3aed;
+            --non-member-light: #ede9fe;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        header .badge {
+            display: inline-block;
+            background: rgba(227, 163, 76, 0.2);
+            color: var(--accent);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+        }
+
+        header h1 {
+            font-size: 2.75rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            font-size: 1.125rem;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Navigation */
+        .doc-nav {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .doc-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .doc-nav a {
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .doc-nav a:hover {
+            color: var(--primary);
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        .section-header {
+            margin-bottom: 48px;
+        }
+
+        .section-number {
+            display: inline-block;
+            color: var(--accent);
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+            color: var(--dark);
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .section-header > p {
+            font-size: 1.125rem;
+            color: var(--gray);
+            max-width: 700px;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            margin-bottom: 16px;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        h4 {
+            font-size: 1rem;
+            margin-bottom: 12px;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        p {
+            color: var(--gray);
+            margin-bottom: 16px;
+        }
+
+        /* Card */
+        .card {
+            background: var(--light);
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 24px;
+        }
+
+        .card-white {
+            background: var(--white);
+            border: 1px solid var(--border);
+        }
+
+        /* Key Point Box */
+        .key-point {
+            background: var(--accent-light);
+            border-left: 4px solid var(--accent);
+            padding: 24px;
+            margin: 24px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .key-point h4 {
+            color: #92400e;
+            margin-bottom: 8px;
+        }
+
+        .key-point p {
+            color: #78350f;
+            margin: 0;
+        }
+
+        /* Decision Box */
+        .decision {
+            background: var(--primary);
+            color: white;
+            padding: 32px;
+            border-radius: 12px;
+            margin: 32px 0;
+        }
+
+        .decision h4 {
+            color: var(--accent);
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .decision h3 {
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .decision p {
+            color: rgba(255,255,255,0.8);
+            margin: 0;
+        }
+
+        /* Two Column Flow */
+        .two-flows {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        @media (max-width: 768px) {
+            .two-flows {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .flow-column {
+            background: var(--light);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .flow-header {
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .flow-column.member .flow-header {
+            background: var(--member-light);
+        }
+
+        .flow-column.non-member .flow-header {
+            background: var(--non-member-light);
+        }
+
+        .flow-header .icon {
+            font-size: 1.25rem;
+        }
+
+        .flow-header h4 {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .flow-column.member .flow-header h4 {
+            color: #065f46;
+        }
+
+        .flow-column.non-member .flow-header h4 {
+            color: #5b21b6;
+        }
+
+        .flow-body {
+            padding: 24px;
+        }
+
+        .flow-step {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .flow-step:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-dot {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--white);
+            border: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        .flow-column.member .step-dot {
+            border-color: var(--member);
+            color: var(--member);
+        }
+
+        .flow-column.non-member .step-dot {
+            border-color: var(--non-member);
+            color: var(--non-member);
+        }
+
+        .step-content h5 {
+            font-size: 0.875rem;
+            margin-bottom: 2px;
+            color: var(--dark);
+        }
+
+        .step-content p {
+            font-size: 0.8125rem;
+            margin: 0;
+            color: var(--gray);
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            font-size: 0.9375rem;
+        }
+
+        th, td {
+            padding: 14px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 0.8125rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            color: var(--gray);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* List */
+        ul, ol {
+            margin: 16px 0;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: var(--gray);
+        }
+
+        li strong {
+            color: var(--dark);
+        }
+
+        /* Numbered Steps */
+        .steps {
+            counter-reset: step;
+            list-style: none;
+            padding: 0;
+        }
+
+        .steps li {
+            counter-increment: step;
+            display: flex;
+            gap: 16px;
+            margin-bottom: 20px;
+            align-items: flex-start;
+        }
+
+        .steps li::before {
+            content: counter(step);
+            background: var(--primary);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        /* Badge */
+        .badge-inline {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 50px;
+            font-size: 0.6875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-member {
+            background: var(--member-light);
+            color: #065f46;
+        }
+
+        .badge-non-member {
+            background: var(--non-member-light);
+            color: #5b21b6;
+        }
+
+        /* Diagram */
+        .diagram {
+            background: var(--light);
+            border-radius: 12px;
+            padding: 32px;
+            margin: 24px 0;
+            text-align: center;
+        }
+
+        .diagram-flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .diagram-box {
+            background: var(--white);
+            border: 1px solid var(--border);
+            padding: 16px 20px;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .diagram-box.highlight {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .diagram-arrow {
+            color: var(--gray-light);
+            font-size: 1.25rem;
+        }
+
+        /* Summary Grid */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 24px 0;
+        }
+
+        .summary-item {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .summary-item .number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+        }
+
+        .summary-item .label {
+            font-size: 0.8125rem;
+            color: var(--gray);
+        }
+
+        /* Timeline */
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin: 24px 0;
+        }
+
+        @media (max-width: 768px) {
+            .timeline-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .timeline-day {
+            background: var(--light);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .timeline-day .day-label {
+            font-size: 0.6875rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .timeline-day h5 {
+            font-size: 0.9375rem;
+            margin-bottom: 12px;
+        }
+
+        .timeline-day ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .timeline-day li {
+            font-size: 0.8125rem;
+            padding: 4px 0;
+            color: var(--gray);
+        }
+
+        /* Print */
+        @media print {
+            .doc-nav {
+                display: none;
+            }
+            section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="badge">The Playbook</div>
+            <h1>Quest Promotions DNA</h1>
+            <p>How we promote quests through Masterclass of the Month. The definitive guide for your team.</p>
+        </div>
+    </header>
+
+    <nav class="doc-nav">
+        <div class="container">
+            <ul>
+                <li><a href="#concept">The Concept</a></li>
+                <li><a href="#flows">User Flows</a></li>
+                <li><a href="#email">Email</a></li>
+                <li><a href="#social">Social</a></li>
+                <li><a href="#in-app">In-App</a></li>
+                <li><a href="#landing-page">Landing Page</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Section 1: The Concept -->
+    <section id="concept">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number">01</div>
+                <h2>The Concept</h2>
+                <p>What is Masterclass of the Month and what problem does it solve?</p>
+            </div>
+
+            <div class="card">
+                <h3>The Problem</h3>
+                <p>Members have access to 100 quests but don't know where to start. Non-members have never experienced the quality of our content. Both need a reason to engage now.</p>
+            </div>
+
+            <div class="card">
+                <h3>The Solution</h3>
+                <p><strong>Masterclass of the Month</strong> is a free monthly live class series. Every month, we spotlight one quest and host a live masterclass on that topic. Each class is promoted individually — simple, focused, no complexity.</p>
+            </div>
+
+            <div class="card">
+                <h3>Two Goals, Two Audiences</h3>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Non-Members</th>
+                        <th>Members</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Goal</strong></td>
+                        <td>Convert to membership or quest purchase</td>
+                        <td>Get them to start the featured quest</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Value for them</strong></td>
+                        <td>Free taste of content quality</td>
+                        <td>Guided journey through quest library</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Post-class action</strong></td>
+                        <td>Buy membership or single quest</td>
+                        <td>Start the quest in app</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="decision">
+                <h4>Positioning</h4>
+                <h3>"Every month. One quest. One live masterclass."</h3>
+                <p>Subscribe once. Get notified each month. Join the classes that interest you. It's free, it's live, and it's your guided path through 100 transformational quests.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: User Flows -->
+    <section id="flows">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number">02</div>
+                <h2>User Flows</h2>
+                <p>Two distinct journeys based on membership status.</p>
+            </div>
+
+            <div class="two-flows">
+                <!-- Non-Member Flow -->
+                <div class="flow-column non-member">
+                    <div class="flow-header">
+                        <span class="icon">🎯</span>
+                        <h4>Non-Member Flow</h4>
+                    </div>
+                    <div class="flow-body">
+                        <div class="flow-step">
+                            <div class="step-dot">1</div>
+                            <div class="step-content">
+                                <h5>Discovery</h5>
+                                <p>Social, ads, or email → Landing page</p>
+                            </div>
+                        </div>
+                        <div class="flow-step">
+                            <div class="step-dot">2</div>
+                            <div class="step-content">
+                                <h5>Landing Page</h5>
+                                <p>Learn about the series + this month's class</p>
+                            </div>
+                        </div>
+                        <div class="flow-step">
+                            <div class="step-dot">3</div>
+                            <div class="step-content">
+                                <h5>Register</h5>
+                                <p>Sign up for the free masterclass</p>
+                            </div>
+                        </div>
+                        <div class="flow-step">
+                            <div class="step-dot">4</div>
+                            <div class="step-content">
+                                <h5>Reminders</h5>
+                                <p>Email sequence with Zoom link</p>
+                            </div>
+                        </div>
+                        <div class="flow-step">
+                            <div class="step-dot">5</div>
+                            <div class="step-content">
+                                <h5>Attend</h5>
+                                <p>Live Zoom class</p>
+                            </div>
+                        </div>
+                        <div class="flow-step">
+                            <div class="step-dot">6</div>
+                            <div class="step-content">
+                                <h5>Convert</h5>
+                                <p>Post-class offer: membership, single quest, or app</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member Flow -->
+                <div class="flow-column member">
+                    <div class="flow-header">
+                        <span class="icon">💎</span>
+                        <h4>Member Flow</h4>
+                    </div>
+                    <div class="flow-body">
+                        <div class="flow-step">
+                            <div class="step-dot">1</div>
+                            <div class="step-content">
+                                <h5>Notification</h5>
+                                <p>Email, push, or in-app banner</p>
+                            </div>
+                        </div>
+                        <div class="flow-step">
+                            <div class="step-dot">2</div>
+                            <div class="step-content">
+                                <h5>Direct RSVP</h5>
+                                <p>One-click from email (no landing page needed)</p>
+                            </div>
+                        </div>
+                        <div class="flow-step">
+                            <div class="step-dot">3</div>
+                            <div class="step-content">
+                                <h5>Reminders</h5>
+                                <p>Push + email reminders</p>
+                            </div>
+                        </div>
+                        <div class="flow-step">
+                            <div class="step-dot">4</div>
+                            <div class="step-content">
+                                <h5>Attend</h5>
+                                <p>Live class (Zoom or in-app)</p>
+                            </div>
+                        </div>
+                        <div class="flow-step">
+                            <div class="step-dot">5</div>
+                            <div class="step-content">
+                                <h5>Start Quest</h5>
+                                <p>Deep link to quest in app</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 32px;">
+                <h3>Key Differences</h3>
+                <table>
+                    <tr>
+                        <th>Touchpoint</th>
+                        <th>Non-Members</th>
+                        <th>Members</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Landing page</strong></td>
+                        <td>Yes — need to sell the value</td>
+                        <td>No — direct RSVP from email/app</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Email tone</strong></td>
+                        <td>Persuasive, benefit-focused</td>
+                        <td>Exclusive, action-focused</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Post-class CTA</strong></td>
+                        <td>Buy membership or single quest</td>
+                        <td>Start the quest now (deep link)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Replay access</strong></td>
+                        <td>48 hours only (creates urgency)</td>
+                        <td>Permanent (they own it)</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Email Strategy -->
+    <section id="email">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number">03</div>
+                <h2>Email Strategy</h2>
+                <p>The structure and branding for Masterclass of the Month emails.</p>
+            </div>
+
+            <div class="decision">
+                <h4>Decision</h4>
+                <h3>Yes — Emails should have series branding</h3>
+                <p>Every Masterclass of the Month email includes a consistent branded header. This builds recognition over time. When subscribers see the "Masterclass of the Month" header, they instantly know what it is.</p>
+            </div>
+
+            <div class="card">
+                <h3>Email Header Banner</h3>
+                <p>A branded visual element at the top of every masterclass email:</p>
+
+                <div style="background: var(--primary); color: white; padding: 24px 32px; border-radius: 8px; margin: 20px 0; text-align: center;">
+                    <div style="font-size: 0.6875rem; letter-spacing: 2px; opacity: 0.8; margin-bottom: 8px; text-transform: uppercase;">Masterclass of the Month</div>
+                    <div style="font-size: 1.25rem; font-weight: 600;">[Quest Name]: [Compelling Promise]</div>
+                    <div style="font-size: 0.875rem; opacity: 0.8; margin-top: 8px;">[Day], [Date] at [Time]</div>
+                </div>
+
+                <p>This banner appears in all masterclass-related emails across both flows.</p>
+            </div>
+
+            <div class="card">
+                <h3>Email Sequence Structure</h3>
+                <p>Your team writes the copy following your email DNA. Here's the structure:</p>
+
+                <h4 style="margin-top: 24px;"><span class="badge-inline badge-non-member">Non-Members</span></h4>
+                <table>
+                    <tr>
+                        <th>Email</th>
+                        <th>When</th>
+                        <th>Purpose</th>
+                        <th>CTA Destination</th>
+                    </tr>
+                    <tr>
+                        <td>1. Announcement</td>
+                        <td>Day 1</td>
+                        <td>Announce the class, generate registrations</td>
+                        <td>Landing page</td>
+                    </tr>
+                    <tr>
+                        <td>2. Value/Proof</td>
+                        <td>Day 2</td>
+                        <td>Build anticipation, share what they'll learn</td>
+                        <td>Landing page</td>
+                    </tr>
+                    <tr>
+                        <td>3. Reminder</td>
+                        <td>Day of (2hrs before)</td>
+                        <td>Drive attendance</td>
+                        <td>Direct Zoom link</td>
+                    </tr>
+                    <tr>
+                        <td>4. Post-Class</td>
+                        <td>Same day (after class)</td>
+                        <td>Convert to purchase</td>
+                        <td>Sales page + replay</td>
+                    </tr>
+                </table>
+
+                <h4 style="margin-top: 32px;"><span class="badge-inline badge-member">Members</span></h4>
+                <table>
+                    <tr>
+                        <th>Email</th>
+                        <th>When</th>
+                        <th>Purpose</th>
+                        <th>CTA Destination</th>
+                    </tr>
+                    <tr>
+                        <td>1. Exclusive Invite</td>
+                        <td>Day 1</td>
+                        <td>Announce featured quest, get RSVP</td>
+                        <td>Direct RSVP / calendar add</td>
+                    </tr>
+                    <tr>
+                        <td>2. Why This Quest</td>
+                        <td>Day 2</td>
+                        <td>Deeper context, member testimonials</td>
+                        <td>RSVP / calendar add</td>
+                    </tr>
+                    <tr>
+                        <td>3. Reminder</td>
+                        <td>Day of (2hrs before)</td>
+                        <td>Drive attendance</td>
+                        <td>Direct Zoom link</td>
+                    </tr>
+                    <tr>
+                        <td>4. Post-Class</td>
+                        <td>Same day (after class)</td>
+                        <td>Get them to start the quest</td>
+                        <td>Deep link to quest in app</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section 5: Social Strategy -->
+    <section id="social">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number">04</div>
+                <h2>Social Strategy</h2>
+                <p>How to promote masterclasses on social media, aligned with Mindvalley's brand.</p>
+            </div>
+
+            <div class="decision">
+                <h4>Decision</h4>
+                <h3>Branded template with series identity</h3>
+                <p>Every Masterclass of the Month post uses a consistent template that's instantly recognizable. Clean, minimal, on-brand. Create a Canva/Figma template library — each month just swap the quest name and date.</p>
+            </div>
+
+            <div class="card">
+                <h3>Visual Style Guidelines</h3>
+                <p>Aligned with Mindvalley's brand aesthetic:</p>
+                <ul>
+                    <li><strong>Clean and minimal:</strong> Lots of whitespace, not cluttered</li>
+                    <li><strong>Color palette:</strong> Dark backgrounds (charcoal/navy) or clean white, with gold accent for premium feel</li>
+                    <li><strong>Typography:</strong> Bold, clear headlines. Easy to read at a glance.</li>
+                    <li><strong>Series badge:</strong> "MASTERCLASS OF THE MONTH" in small caps, letter-spaced</li>
+                    <li><strong>Human element:</strong> Feature the instructor or real imagery — no AI-generated visuals</li>
+                    <li><strong>Consistent layout:</strong> Same template structure every month for recognition</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Post Template Elements</h3>
+                <p>What every masterclass social graphic should include:</p>
+
+                <div style="background: var(--primary); color: white; padding: 48px 32px; border-radius: 8px; margin: 20px 0; text-align: center;">
+                    <div style="font-size: 0.625rem; letter-spacing: 3px; opacity: 0.7; margin-bottom: 16px; text-transform: uppercase;">Masterclass of the Month</div>
+                    <div style="font-size: 1.5rem; font-weight: 700; margin-bottom: 8px;">[Quest Name]</div>
+                    <div style="font-size: 1rem; opacity: 0.8;">[Day], [Date] • [Time]</div>
+                    <div style="margin-top: 24px; font-size: 0.8125rem; color: var(--accent);">FREE LIVE CLASS</div>
+                </div>
+
+                <ul>
+                    <li><strong>Series badge</strong> — "Masterclass of the Month" identifier</li>
+                    <li><strong>Quest name</strong> — Large, prominent</li>
+                    <li><strong>Date and time</strong> — Clear and specific</li>
+                    <li><strong>Free indicator</strong> — "Free Live Class" or similar</li>
+                    <li><strong>Optional:</strong> Instructor photo or quest imagery</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Content Calendar: 3 Posts Per Launch</h3>
+                <table>
+                    <tr>
+                        <th>Post</th>
+                        <th>Day</th>
+                        <th>Format</th>
+                        <th>Purpose</th>
+                    </tr>
+                    <tr>
+                        <td><strong>1. Announcement</strong></td>
+                        <td>Day 1</td>
+                        <td>Feed + Stories</td>
+                        <td>Announce the class, link in bio</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2. Value/Proof</strong></td>
+                        <td>Day 2</td>
+                        <td>Feed + Stories</td>
+                        <td>Testimonial, key learnings, or instructor credibility</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. Countdown/Live</strong></td>
+                        <td>Day 3-4</td>
+                        <td>Stories priority</td>
+                        <td>Urgency, last call, "we're live" energy</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="card">
+                <h3>Stories Strategy</h3>
+                <table>
+                    <tr>
+                        <th>Day</th>
+                        <th>Content</th>
+                        <th>Interactive Element</th>
+                    </tr>
+                    <tr>
+                        <td>Day 1</td>
+                        <td>Share the feed post + "New masterclass"</td>
+                        <td>Poll: "Will you join us?"</td>
+                    </tr>
+                    <tr>
+                        <td>Day 2</td>
+                        <td>Behind-the-scenes or teaser</td>
+                        <td>Question box</td>
+                    </tr>
+                    <tr>
+                        <td>Day 3</td>
+                        <td>Countdown reminder</td>
+                        <td>Countdown sticker</td>
+                    </tr>
+                    <tr>
+                        <td>Day 4</td>
+                        <td>"We're live!" + screenshots during class</td>
+                        <td>Link sticker to Zoom</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section 6: In-App Strategy -->
+    <section id="in-app">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number">05</div>
+                <h2>In-App Strategy</h2>
+                <p>Promoting masterclasses to members who use the app.</p>
+            </div>
+
+            <div class="card">
+                <h3>Touchpoints</h3>
+                <table>
+                    <tr>
+                        <th>Element</th>
+                        <th>Description</th>
+                        <th>Timing</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Push Notifications</strong></td>
+                        <td>3 pushes: announcement, day before, 1 hour before</td>
+                        <td>Day 1, Day 3, Day 4</td>
+                    </tr>
+                    <tr>
+                        <td><strong>In-App Banner</strong></td>
+                        <td>"Masterclass of the Month: [Quest Name] — [Date]" on home screen</td>
+                        <td>Entire launch week</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Live Event Card</strong></td>
+                        <td>Scheduled event in Events section with countdown and RSVP</td>
+                        <td>Whole month (schedule in advance)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Post-Class Banner Update</strong></td>
+                        <td>Change banner to "Start [Quest Name] now →" with deep link</td>
+                        <td>After class ends</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="key-point">
+                <h4>Pro Tip</h4>
+                <p>Schedule the next 2-3 months of Live Event cards in advance. Members can see what's coming and save events they're interested in.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Landing Page -->
+    <section id="landing-page">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number">06</div>
+                <h2>Landing Page Structure</h2>
+                <p>One evergreen URL that's updated monthly: <code>mindvalley.com/membership/masterclass</code></p>
+            </div>
+
+            <div class="card">
+                <h3>Page Sections</h3>
+                <ol class="steps">
+                    <li>
+                        <div>
+                            <strong>Hero</strong><br>
+                            Series branding + this month's class. Headline, date/time, registration form
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Stats Bar</strong><br>
+                            Instructor credibility: hours on stage, NPS rating, students trained, etc.
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>What You'll Discover</strong><br>
+                            3 key learnings/breakthroughs from the masterclass
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Meet Your Host</strong><br>
+                            Instructor bio, credentials, photo collage
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>FAQ</strong><br>
+                            Is it free? Yes. Will there be a replay? Do I need experience? etc.
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Final CTA</strong><br>
+                            Last push to register with button back to form
+                        </div>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="card">
+                <h3>Thank You Page (After Registration)</h3>
+                <ul>
+                    <li><strong>Confirmation:</strong> "You're registered! Check your email for the Zoom link."</li>
+                    <li><strong>Add to calendar:</strong> Google, Apple, Outlook buttons</li>
+                    <li><strong>Share:</strong> Social share buttons</li>
+                    <li><strong>App download:</strong> "Explore free content while you wait."</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Timeline -->
+    <section id="timeline">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number">07</div>
+                <h2>Launch Timeline</h2>
+                <p>The 4-day sequence for each monthly masterclass.</p>
+            </div>
+
+            <div class="timeline-grid">
+                <div class="timeline-day">
+                    <div class="day-label">Day 1</div>
+                    <h5>Announcement</h5>
+                    <ul>
+                        <li>Email 1 (both audiences)</li>
+                        <li>Social Post 1</li>
+                        <li>Stories</li>
+                        <li>Push Notification 1</li>
+                        <li>Activate In-App Banner</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-day">
+                    <div class="day-label">Day 2</div>
+                    <h5>Value Stack</h5>
+                    <ul>
+                        <li>Email 2 (both audiences)</li>
+                        <li>Social Post 2</li>
+                        <li>Stories</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-day">
+                    <div class="day-label">Day 3</div>
+                    <h5>Countdown</h5>
+                    <ul>
+                        <li>Social Post 3</li>
+                        <li>Stories (countdown)</li>
+                        <li>Push Notification 2</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-day">
+                    <div class="day-label">Day 4</div>
+                    <h5>Live Class</h5>
+                    <ul>
+                        <li>Email 3 (2hrs before)</li>
+                        <li>Push Notification 3</li>
+                        <li>Host Class</li>
+                        <li>Post-Class Emails</li>
+                        <li>Update In-App Banner</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 32px;">
+                <h3>Assets Per Launch</h3>
+                <div class="summary-grid">
+                    <div class="summary-item">
+                        <span class="number">8</span>
+                        <span class="label">Emails (4 per audience)</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="number">3</span>
+                        <span class="label">Social Posts</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="number">3</span>
+                        <span class="label">Push Notifications</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="number">1</span>
+                        <span class="label">Landing Page Update</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Monthly Planning</h3>
+                <table>
+                    <tr>
+                        <th>When</th>
+                        <th>What</th>
+                    </tr>
+                    <tr>
+                        <td>1st of Month</td>
+                        <td>Finalize quest + confirm instructor</td>
+                    </tr>
+                    <tr>
+                        <td>Week 1</td>
+                        <td>Create assets (update emails, social, landing page)</td>
+                    </tr>
+                    <tr>
+                        <td>Week 2</td>
+                        <td>Schedule everything</td>
+                    </tr>
+                    <tr>
+                        <td>Week 3</td>
+                        <td>4-day launch sequence</td>
+                    </tr>
+                    <tr>
+                        <td>Week 4</td>
+                        <td>Review metrics + plan next month</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Summary Section -->
+    <section style="background: var(--primary); color: white;">
+        <div class="container" style="text-align: center;">
+            <h2 style="color: white; margin-bottom: 32px;">Quick Reference</h2>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; text-align: left;">
+                <div style="background: rgba(255,255,255,0.1); padding: 24px; border-radius: 8px;">
+                    <h4 style="color: var(--accent); margin-bottom: 16px;">Non-Member Flow</h4>
+                    <ol style="color: rgba(255,255,255,0.8); padding-left: 20px;">
+                        <li>Social/email → Landing page</li>
+                        <li>Register for free masterclass</li>
+                        <li>Reminder emails + Zoom link</li>
+                        <li>Attend live class</li>
+                        <li>Post-class: Buy offer</li>
+                    </ol>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.1); padding: 24px; border-radius: 8px;">
+                    <h4 style="color: var(--accent); margin-bottom: 16px;">Member Flow</h4>
+                    <ol style="color: rgba(255,255,255,0.8); padding-left: 20px;">
+                        <li>Email/push/in-app notification</li>
+                        <li>Direct RSVP (no landing page)</li>
+                        <li>Reminders</li>
+                        <li>Attend live class</li>
+                        <li>Post-class: Start quest in app</li>
+                    </ol>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.1); padding: 24px; border-radius: 8px;">
+                    <h4 style="color: var(--accent); margin-bottom: 16px;">Key Principles</h4>
+                    <ul style="color: rgba(255,255,255,0.8); list-style: none; padding: 0;">
+                        <li>✓ Promote each class individually</li>
+                        <li>✓ Consistent branding everywhere</li>
+                        <li>✓ Different flows for member vs non</li>
+                        <li>✓ Landing page for non-members only</li>
+                        <li>✓ 4-day launch, monthly</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: var(--dark); color: white; padding: 40px 0; text-align: center;">
+        <div class="container">
+            <p style="color: rgba(255,255,255,0.6); margin: 0;">Quest Promotions DNA — Masterclass of the Month</p>
+        </div>
+    </footer>
+</body>
+</html>

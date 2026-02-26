@@ -1,0 +1,1694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Master Class Launch System - Marketing Proposal</title>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #10b981;
+            --accent: #f59e0b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --border: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            margin-bottom: 20px;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            margin-bottom: 24px;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2 .number {
+            background: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            margin-bottom: 16px;
+            color: var(--dark);
+        }
+
+        p {
+            color: var(--gray);
+            margin-bottom: 16px;
+        }
+
+        /* Goals Section */
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .goal-card {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        .goal-card .icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            font-size: 1.5rem;
+        }
+
+        .goal-card h4 {
+            font-size: 1.125rem;
+            margin-bottom: 8px;
+        }
+
+        .goal-card p {
+            font-size: 0.9375rem;
+            margin: 0;
+        }
+
+        /* Flow Diagram */
+        .flow-section {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            margin-top: 24px;
+            border: 1px solid var(--border);
+        }
+
+        .flow-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .flow-header .label {
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .flow-header.non-member .label {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .flow-header.member .label {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .flow-steps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .flow-step {
+            background: var(--light);
+            padding: 16px 20px;
+            border-radius: 10px;
+            text-align: center;
+            min-width: 140px;
+            position: relative;
+        }
+
+        .flow-step .step-label {
+            font-size: 0.75rem;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .flow-step .step-content {
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .flow-arrow {
+            color: var(--gray);
+            font-size: 1.5rem;
+        }
+
+        .flow-branch {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-left: 40px;
+            padding-left: 20px;
+            border-left: 2px dashed var(--border);
+        }
+
+        .flow-branch .flow-step {
+            background: #fef3c7;
+        }
+
+        .flow-branch.member .flow-step {
+            background: #d1fae5;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 32px;
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -33px;
+            top: 28px;
+            width: 12px;
+            height: 12px;
+            background: var(--primary);
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px var(--primary);
+        }
+
+        .timeline-item .day {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .timeline-item h4 {
+            font-size: 1.125rem;
+            margin-bottom: 12px;
+        }
+
+        .timeline-item ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .timeline-item li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 8px;
+            color: var(--gray);
+            font-size: 0.9375rem;
+        }
+
+        .timeline-item li::before {
+            content: '✓';
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        /* Assets Grid */
+        .assets-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 24px;
+        }
+
+        .asset-card {
+            background: white;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .asset-card-header {
+            padding: 20px 24px;
+            background: var(--light);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .asset-card-header h4 {
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .asset-count {
+            background: var(--primary);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .asset-card-body {
+            padding: 24px;
+        }
+
+        .asset-item {
+            padding: 16px;
+            background: var(--light);
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+
+        .asset-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .asset-item h5 {
+            font-size: 0.9375rem;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+
+        .asset-item p {
+            font-size: 0.875rem;
+            margin: 0;
+        }
+
+        .asset-item .tag {
+            display: inline-block;
+            background: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            color: var(--gray);
+            margin-top: 8px;
+            border: 1px solid var(--border);
+        }
+
+        /* Email Templates */
+        .email-template {
+            background: white;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            margin-bottom: 24px;
+            overflow: hidden;
+        }
+
+        .email-header {
+            padding: 16px 24px;
+            background: var(--light);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .email-header .email-meta {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .email-header .email-meta span {
+            font-size: 0.875rem;
+            color: var(--gray);
+        }
+
+        .email-header .email-meta strong {
+            color: var(--dark);
+        }
+
+        .email-body {
+            padding: 24px;
+        }
+
+        .email-body .subject {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .email-body .content {
+            color: var(--gray);
+            font-size: 0.9375rem;
+        }
+
+        .email-body .content p {
+            margin-bottom: 12px;
+        }
+
+        .email-body .cta-button {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 16px 0;
+        }
+
+        /* Checklist */
+        .checklist {
+            background: white;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            padding: 24px;
+        }
+
+        .checklist-section {
+            margin-bottom: 24px;
+        }
+
+        .checklist-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .checklist-section h4 {
+            font-size: 1rem;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--light);
+        }
+
+        .checklist-item:last-child {
+            border-bottom: none;
+        }
+
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--border);
+            border-radius: 4px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .checklist-item .item-content {
+            flex: 1;
+        }
+
+        .checklist-item .item-title {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 4px;
+        }
+
+        .checklist-item .item-desc {
+            font-size: 0.875rem;
+            color: var(--gray);
+        }
+
+        /* Landing Page Structure */
+        .landing-structure {
+            background: white;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .landing-section-item {
+            padding: 24px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            gap: 20px;
+        }
+
+        .landing-section-item:last-child {
+            border-bottom: none;
+        }
+
+        .landing-section-item .section-number {
+            width: 32px;
+            height: 32px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.875rem;
+            flex-shrink: 0;
+        }
+
+        .landing-section-item .section-content h4 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        .landing-section-item .section-content p {
+            font-size: 0.9375rem;
+            margin: 0;
+        }
+
+        .landing-section-item .section-content .elements {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .landing-section-item .section-content .element-tag {
+            background: var(--light);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            color: var(--gray);
+        }
+
+        /* Two Column Layout */
+        .two-col {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 32px;
+        }
+
+        /* Summary Box */
+        .summary-box {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 32px;
+            border-radius: 16px;
+            margin-top: 32px;
+        }
+
+        .summary-box h3 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .summary-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 24px;
+        }
+
+        .summary-stat {
+            text-align: center;
+        }
+
+        .summary-stat .number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .summary-stat .label {
+            opacity: 0.9;
+            font-size: 0.9375rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            header {
+                background: var(--dark) !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            section {
+                page-break-inside: avoid;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.75rem;
+            }
+
+            .flow-steps {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .flow-arrow {
+                transform: rotate(90deg);
+                text-align: center;
+            }
+
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="badge">MARKETING PROPOSAL</div>
+            <h1>Monthly Master Class Launch System</h1>
+            <p>A repeatable framework to drive quest engagement for members and convert non-members through weekly live classes</p>
+        </div>
+    </header>
+
+    <!-- Section 1: Program Goals -->
+    <section>
+        <div class="container">
+            <h2><span class="number">1</span> Program Goals</h2>
+            <p>The Monthly Master Class program serves two distinct audiences with aligned but different objectives.</p>
+
+            <div class="goals-grid">
+                <div class="goal-card">
+                    <div class="icon">🎯</div>
+                    <h4>For Members</h4>
+                    <p>Drive quest consumption by highlighting one featured quest per month. Get members excited to complete more quests and deepen their engagement with the platform.</p>
+                </div>
+                <div class="goal-card">
+                    <div class="icon">🚀</div>
+                    <h4>For Non-Members</h4>
+                    <p>Provide a free taste of value that showcases the quality of our quests. Convert attendees to membership or individual quest purchases.</p>
+                </div>
+                <div class="goal-card">
+                    <div class="icon">📅</div>
+                    <h4>Repeatable System</h4>
+                    <p>Create a templated launch process that can be executed monthly with minimal setup. Same flow, different quest each month.</p>
+                </div>
+                <div class="goal-card">
+                    <div class="icon">📊</div>
+                    <h4>Measurable Impact</h4>
+                    <p>Track registrations, attendance, quest enrollments, and conversions to continuously optimize the program.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: User Flows -->
+    <section>
+        <div class="container">
+            <h2><span class="number">2</span> User Flows</h2>
+            <p>Two distinct journeys based on membership status, optimized for each audience's needs.</p>
+
+            <!-- Non-Member Flow -->
+            <div class="flow-section">
+                <div class="flow-header non-member">
+                    <span class="label">NON-MEMBER FLOW</span>
+                    <span style="color: var(--gray); font-size: 0.9375rem;">Goal: Register → Attend → Convert</span>
+                </div>
+
+                <div class="flow-steps">
+                    <div class="flow-step">
+                        <div class="step-label">Discovery</div>
+                        <div class="step-content">Social / Ads / Email</div>
+                    </div>
+                    <span class="flow-arrow">→</span>
+                    <div class="flow-step">
+                        <div class="step-label">Learn</div>
+                        <div class="step-content">Landing Page</div>
+                    </div>
+                    <span class="flow-arrow">→</span>
+                    <div class="flow-step">
+                        <div class="step-label">Commit</div>
+                        <div class="step-content">Register</div>
+                    </div>
+                    <span class="flow-arrow">→</span>
+                    <div class="flow-step">
+                        <div class="step-label">Nurture</div>
+                        <div class="step-content">Email Reminders</div>
+                    </div>
+                    <span class="flow-arrow">→</span>
+                    <div class="flow-step">
+                        <div class="step-label">Attend</div>
+                        <div class="step-content">Zoom Live Class</div>
+                    </div>
+                    <span class="flow-arrow">→</span>
+                    <div class="flow-step">
+                        <div class="step-label">Convert</div>
+                        <div class="step-content">Sales Page</div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 24px; padding: 16px; background: #fef3c7; border-radius: 8px;">
+                    <strong style="color: #92400e;">Post-Class Options:</strong>
+                    <ul style="margin-top: 8px; margin-left: 20px; color: #92400e;">
+                        <li>Buy the full membership (best value)</li>
+                        <li>Buy just this single quest</li>
+                        <li>Download the app and explore free content</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Member Flow -->
+            <div class="flow-section" style="margin-top: 24px;">
+                <div class="flow-header member">
+                    <span class="label">MEMBER FLOW</span>
+                    <span style="color: var(--gray); font-size: 0.9375rem;">Goal: Attend → Start Quest</span>
+                </div>
+
+                <div class="flow-steps">
+                    <div class="flow-step">
+                        <div class="step-label">Discover</div>
+                        <div class="step-content">Email / Push / In-App</div>
+                    </div>
+                    <span class="flow-arrow">→</span>
+                    <div class="flow-step">
+                        <div class="step-label">Commit</div>
+                        <div class="step-content">RSVP (Direct Link)</div>
+                    </div>
+                    <span class="flow-arrow">→</span>
+                    <div class="flow-step">
+                        <div class="step-label">Remind</div>
+                        <div class="step-content">Push + Email</div>
+                    </div>
+                    <span class="flow-arrow">→</span>
+                    <div class="flow-step">
+                        <div class="step-label">Attend</div>
+                        <div class="step-content">Zoom / In-App</div>
+                    </div>
+                    <span class="flow-arrow">→</span>
+                    <div class="flow-step">
+                        <div class="step-label">Action</div>
+                        <div class="step-content">Start Quest in App</div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 24px; padding: 16px; background: #d1fae5; border-radius: 8px;">
+                    <strong style="color: #065f46;">Key Difference:</strong>
+                    <span style="color: #065f46;">Members skip the landing page. They receive direct Zoom/calendar links via email. No selling needed—just excitement and reminders.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Launch Timeline -->
+    <section style="background: white;">
+        <div class="container">
+            <h2><span class="number">3</span> Launch Timeline (4 Days)</h2>
+            <p>A compact, high-impact launch sequence that creates urgency without overwhelming your team.</p>
+
+            <div class="timeline" style="margin-top: 32px;">
+                <div class="timeline-item">
+                    <span class="day">DAY 1 - ANNOUNCEMENT</span>
+                    <h4>Launch & Generate Buzz</h4>
+                    <ul>
+                        <li>Send announcement email to general list → Landing page</li>
+                        <li>Send exclusive invite email to members → Direct RSVP link</li>
+                        <li>Post announcement on social media (all platforms)</li>
+                        <li>Activate in-app banner: "Master Class of the Month"</li>
+                        <li>Schedule Live Event banner in app</li>
+                        <li>Launch ads (if using paid promotion)</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="day">DAY 2 - VALUE STACK</span>
+                    <h4>Build Anticipation</h4>
+                    <ul>
+                        <li>Send "what you'll learn" email to general list</li>
+                        <li>Send "why this quest matters" email to members</li>
+                        <li>Post testimonial/social proof content on social</li>
+                        <li>Send push notification to app users who haven't RSVP'd</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="day">DAY 3 - REMINDER</span>
+                    <h4>Final Push (Day Before)</h4>
+                    <ul>
+                        <li>Send "tomorrow's the day" email to registrants</li>
+                        <li>Post countdown content on social media</li>
+                        <li>Send push notification: "Class tomorrow!"</li>
+                        <li>Optional: Behind-the-scenes story/reel</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="day">DAY 4 - LIVE CLASS</span>
+                    <h4>Deliver & Convert</h4>
+                    <ul>
+                        <li>Send "We're live in 2 hours" email with Zoom link</li>
+                        <li>Send "Starting now!" push notification</li>
+                        <li>Host live Zoom class</li>
+                        <li>Post "Live now!" stories during class</li>
+                        <li>Send post-class email with replay + offer (non-members)</li>
+                        <li>Send post-class email with quest deep link (members)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Marketing Assets -->
+    <section>
+        <div class="container">
+            <h2><span class="number">4</span> Marketing Assets Required</h2>
+            <p>Complete inventory of assets needed for each launch. Template these once, customize monthly.</p>
+
+            <div class="assets-grid">
+                <!-- Social Media -->
+                <div class="asset-card">
+                    <div class="asset-card-header">
+                        <h4>📱 Social Media</h4>
+                        <span class="asset-count">3 Posts</span>
+                    </div>
+                    <div class="asset-card-body">
+                        <div class="asset-item">
+                            <h5>Post 1: Announcement</h5>
+                            <p>Introduce the class, the topic, and the date. Include visual of the quest/instructor.</p>
+                            <span class="tag">Day 1 • Feed + Stories</span>
+                        </div>
+                        <div class="asset-item">
+                            <h5>Post 2: Value/Social Proof</h5>
+                            <p>Testimonial, key learnings, or transformation story related to the quest topic.</p>
+                            <span class="tag">Day 2 • Feed + Stories</span>
+                        </div>
+                        <div class="asset-item">
+                            <h5>Post 3: Countdown/Urgency</h5>
+                            <p>"Tomorrow!" or "Live now!" with clear CTA. Can be a reel or story-only.</p>
+                            <span class="tag">Day 3-4 • Stories Priority</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email: Non-Members -->
+                <div class="asset-card">
+                    <div class="asset-card-header">
+                        <h4>📧 Email: Non-Members</h4>
+                        <span class="asset-count">3 Emails</span>
+                    </div>
+                    <div class="asset-card-body">
+                        <div class="asset-item">
+                            <h5>Email 1: Announcement</h5>
+                            <p>"Free Master Class: [Topic]" — Introduce the class, who it's for, and why it matters.</p>
+                            <span class="tag">Day 1 • → Landing Page</span>
+                        </div>
+                        <div class="asset-item">
+                            <h5>Email 2: Value Stack</h5>
+                            <p>"Here's what you'll learn" — Bullet points of key takeaways, instructor credibility.</p>
+                            <span class="tag">Day 2 • → Landing Page</span>
+                        </div>
+                        <div class="asset-item">
+                            <h5>Email 3: Day-Of Reminder</h5>
+                            <p>"We're live in 2 hours" — Direct Zoom link, sense of urgency.</p>
+                            <span class="tag">Day 4 • → Zoom Link</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email: Members -->
+                <div class="asset-card">
+                    <div class="asset-card-header">
+                        <h4>💎 Email: Members</h4>
+                        <span class="asset-count">3 Emails</span>
+                    </div>
+                    <div class="asset-card-body">
+                        <div class="asset-item">
+                            <h5>Email 1: Exclusive Invite</h5>
+                            <p>"This month's featured quest" — Exclusive tone, direct RSVP link, calendar add.</p>
+                            <span class="tag">Day 1 • → RSVP/Calendar</span>
+                        </div>
+                        <div class="asset-item">
+                            <h5>Email 2: Why This Quest</h5>
+                            <p>Deeper dive on the quest's impact, member success stories, what to expect.</p>
+                            <span class="tag">Day 2 • → RSVP/Calendar</span>
+                        </div>
+                        <div class="asset-item">
+                            <h5>Email 3: Day-Of Reminder</h5>
+                            <p>"See you in 2 hours" — Direct Zoom link, warm and personal tone.</p>
+                            <span class="tag">Day 4 • → Zoom Link</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- In-App -->
+                <div class="asset-card">
+                    <div class="asset-card-header">
+                        <h4>📲 In-App Touchpoints</h4>
+                        <span class="asset-count">3 Elements</span>
+                    </div>
+                    <div class="asset-card-body">
+                        <div class="asset-item">
+                            <h5>Push Notifications</h5>
+                            <p>Day 1: "New Master Class announced" • Day 4: "Starting in 1 hour!"</p>
+                            <span class="tag">Scheduled • 2-3 Total</span>
+                        </div>
+                        <div class="asset-item">
+                            <h5>In-App Banner</h5>
+                            <p>"Master Class of the Month: [Topic]" — Persistent banner linking to RSVP or Zoom.</p>
+                            <span class="tag">Days 1-4 • Home Screen</span>
+                        </div>
+                        <div class="asset-item">
+                            <h5>Live Event Banner</h5>
+                            <p>Scheduled event card that shows countdown and allows users to save/RSVP.</p>
+                            <span class="tag">Whole Month • Events Section</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Landing Page -->
+                <div class="asset-card">
+                    <div class="asset-card-header">
+                        <h4>🖥️ Landing Page</h4>
+                        <span class="asset-count">1 Template</span>
+                    </div>
+                    <div class="asset-card-body">
+                        <div class="asset-item">
+                            <h5>Registration Page</h5>
+                            <p>Hero with title/date, value props, instructor bio, social proof, registration form.</p>
+                            <span class="tag">Public URL • Non-Members</span>
+                        </div>
+                        <div class="asset-item">
+                            <h5>Thank You Page</h5>
+                            <p>Confirmation message, Zoom link preview, calendar add, share buttons.</p>
+                            <span class="tag">Post-Registration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post-Class -->
+                <div class="asset-card">
+                    <div class="asset-card-header">
+                        <h4>🎬 Post-Class Assets</h4>
+                        <span class="asset-count">2 Emails</span>
+                    </div>
+                    <div class="asset-card-body">
+                        <div class="asset-item">
+                            <h5>Non-Member: Offer Email</h5>
+                            <p>Replay link (48hr access), membership offer, single quest purchase option.</p>
+                            <span class="tag">Day 4 (Post-Class)</span>
+                        </div>
+                        <div class="asset-item">
+                            <h5>Member: Action Email</h5>
+                            <p>"Start your quest now" — Deep link to the quest in the app. No selling, just action.</p>
+                            <span class="tag">Day 4 (Post-Class)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Landing Page Structure -->
+    <section style="background: white;">
+        <div class="container">
+            <h2><span class="number">5</span> Landing Page Structure</h2>
+            <p>A conversion-optimized layout for the master class registration page.</p>
+
+            <div class="landing-structure" style="margin-top: 24px;">
+                <div class="landing-section-item">
+                    <div class="section-number">1</div>
+                    <div class="section-content">
+                        <h4>Hero Section</h4>
+                        <p>Compelling headline, class date/time, instructor photo or quest visual, primary CTA button.</p>
+                        <div class="elements">
+                            <span class="element-tag">Headline</span>
+                            <span class="element-tag">Date/Time</span>
+                            <span class="element-tag">Visual</span>
+                            <span class="element-tag">CTA: "Register Free"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="landing-section-item">
+                    <div class="section-number">2</div>
+                    <div class="section-content">
+                        <h4>What You'll Learn</h4>
+                        <p>3-5 bullet points of specific, outcome-focused takeaways from the class.</p>
+                        <div class="elements">
+                            <span class="element-tag">Benefit 1</span>
+                            <span class="element-tag">Benefit 2</span>
+                            <span class="element-tag">Benefit 3</span>
+                            <span class="element-tag">Checkmark Icons</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="landing-section-item">
+                    <div class="section-number">3</div>
+                    <div class="section-content">
+                        <h4>About the Instructor/Quest</h4>
+                        <p>Brief bio, credibility markers, why they're qualified to teach this topic.</p>
+                        <div class="elements">
+                            <span class="element-tag">Photo</span>
+                            <span class="element-tag">Bio (2-3 sentences)</span>
+                            <span class="element-tag">Credentials</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="landing-section-item">
+                    <div class="section-number">4</div>
+                    <div class="section-content">
+                        <h4>Social Proof</h4>
+                        <p>Testimonials from quest completers, star ratings, or notable stats.</p>
+                        <div class="elements">
+                            <span class="element-tag">Testimonial Cards</span>
+                            <span class="element-tag">Star Rating</span>
+                            <span class="element-tag"># of Completions</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="landing-section-item">
+                    <div class="section-number">5</div>
+                    <div class="section-content">
+                        <h4>Registration Form</h4>
+                        <p>Simple form: Name + Email. Minimal friction, clear value proposition above the form.</p>
+                        <div class="elements">
+                            <span class="element-tag">Name Field</span>
+                            <span class="element-tag">Email Field</span>
+                            <span class="element-tag">CTA Button</span>
+                            <span class="element-tag">Privacy Note</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="landing-section-item">
+                    <div class="section-number">6</div>
+                    <div class="section-content">
+                        <h4>FAQ (Optional)</h4>
+                        <p>Address common objections: Is it really free? Will there be a replay? How long is it?</p>
+                        <div class="elements">
+                            <span class="element-tag">Accordion FAQ</span>
+                            <span class="element-tag">3-4 Questions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thank You Page -->
+            <h3 style="margin-top: 40px;">Thank You Page Structure</h3>
+            <div class="landing-structure" style="margin-top: 16px;">
+                <div class="landing-section-item">
+                    <div class="section-number">✓</div>
+                    <div class="section-content">
+                        <h4>Confirmation Message</h4>
+                        <p>"You're registered! Check your email for the Zoom link."</p>
+                    </div>
+                </div>
+                <div class="landing-section-item">
+                    <div class="section-number">📅</div>
+                    <div class="section-content">
+                        <h4>Add to Calendar</h4>
+                        <p>Google Calendar, Apple Calendar, Outlook buttons.</p>
+                    </div>
+                </div>
+                <div class="landing-section-item">
+                    <div class="section-number">📲</div>
+                    <div class="section-content">
+                        <h4>Download the App (Optional)</h4>
+                        <p>"Get the app to explore more free content while you wait."</p>
+                    </div>
+                </div>
+                <div class="landing-section-item">
+                    <div class="section-number">🔗</div>
+                    <div class="section-content">
+                        <h4>Share With Friends</h4>
+                        <p>Social share buttons to amplify registrations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Email Templates -->
+    <section>
+        <div class="container">
+            <h2><span class="number">6</span> Email Templates</h2>
+            <p>Ready-to-customize email frameworks for each send.</p>
+
+            <h3 style="margin-top: 32px; margin-bottom: 16px;">Non-Member Emails</h3>
+
+            <!-- Non-Member Email 1 -->
+            <div class="email-template">
+                <div class="email-header">
+                    <div class="email-meta">
+                        <span><strong>Email 1:</strong> Announcement</span>
+                        <span><strong>Send:</strong> Day 1</span>
+                        <span><strong>CTA:</strong> Landing Page</span>
+                    </div>
+                </div>
+                <div class="email-body">
+                    <div class="subject">Subject: Free Master Class: [Topic] (This [Day])</div>
+                    <div class="content">
+                        <p>Hi [First Name],</p>
+                        <p>This [Day], I'm hosting a free live master class on <strong>[Topic]</strong>.</p>
+                        <p>In this class, you'll discover:</p>
+                        <ul style="margin-left: 20px; margin-bottom: 16px;">
+                            <li>[Key takeaway 1]</li>
+                            <li>[Key takeaway 2]</li>
+                            <li>[Key takeaway 3]</li>
+                        </ul>
+                        <p>Whether you've struggled with [pain point] or you're looking to [desired outcome], this class will give you actionable tools you can use immediately.</p>
+                        <a href="#" class="cta-button">Save Your Free Spot →</a>
+                        <p style="margin-top: 24px;"><strong>Date:</strong> [Day, Date]<br>
+                        <strong>Time:</strong> [Time] [Timezone]<br>
+                        <strong>Duration:</strong> ~60 minutes</p>
+                        <p>Spots are limited for the live session, so register now to secure yours.</p>
+                        <p>See you there,<br>[Signature]</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Non-Member Email 2 -->
+            <div class="email-template">
+                <div class="email-header">
+                    <div class="email-meta">
+                        <span><strong>Email 2:</strong> Value Stack</span>
+                        <span><strong>Send:</strong> Day 2</span>
+                        <span><strong>CTA:</strong> Landing Page</span>
+                    </div>
+                </div>
+                <div class="email-body">
+                    <div class="subject">Subject: What you'll learn on [Day] (don't miss this)</div>
+                    <div class="content">
+                        <p>Hi [First Name],</p>
+                        <p>Quick reminder: Our free master class on <strong>[Topic]</strong> is happening in just [X] days.</p>
+                        <p>I wanted to share a bit more about why I'm so excited about this one.</p>
+                        <p>[1-2 sentences about the instructor's expertise or personal connection to the topic]</p>
+                        <p>Here's what makes this class different:</p>
+                        <ul style="margin-left: 20px; margin-bottom: 16px;">
+                            <li><strong>[Unique angle 1]:</strong> [Brief explanation]</li>
+                            <li><strong>[Unique angle 2]:</strong> [Brief explanation]</li>
+                            <li><strong>[Practical element]:</strong> You'll walk away with [specific tool/technique]</li>
+                        </ul>
+                        <p>People who've completed this quest have reported [specific result/testimonial snippet].</p>
+                        <a href="#" class="cta-button">Register Now (It's Free) →</a>
+                        <p style="margin-top: 24px;">Can't wait to see you there.</p>
+                        <p>[Signature]</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Non-Member Email 3 -->
+            <div class="email-template">
+                <div class="email-header">
+                    <div class="email-meta">
+                        <span><strong>Email 3:</strong> Day-Of Reminder</span>
+                        <span><strong>Send:</strong> Day 4 (2 hours before)</span>
+                        <span><strong>CTA:</strong> Direct Zoom Link</span>
+                    </div>
+                </div>
+                <div class="email-body">
+                    <div class="subject">Subject: We're live in 2 hours! [Topic] Master Class</div>
+                    <div class="content">
+                        <p>Hi [First Name],</p>
+                        <p>We're going live in just 2 hours!</p>
+                        <p><strong>Class:</strong> [Topic]<br>
+                        <strong>Time:</strong> [Time] [Timezone] (that's 2 hours from now)<br>
+                        <strong>Where:</strong> Zoom (link below)</p>
+                        <a href="#" class="cta-button">Join the Class →</a>
+                        <p style="margin-top: 24px;">If you can't make it live, a replay will be available for 48 hours. But I highly recommend joining live—you'll be able to ask questions and connect with others in real-time.</p>
+                        <p>See you soon,<br>[Signature]</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px; margin-bottom: 16px;">Member Emails</h3>
+
+            <!-- Member Email 1 -->
+            <div class="email-template">
+                <div class="email-header">
+                    <div class="email-meta">
+                        <span><strong>Email 1:</strong> Exclusive Invite</span>
+                        <span><strong>Send:</strong> Day 1</span>
+                        <span><strong>CTA:</strong> RSVP / Add to Calendar</span>
+                    </div>
+                </div>
+                <div class="email-body">
+                    <div class="subject">Subject: [First Name], this month's featured quest (+ live class invite)</div>
+                    <div class="content">
+                        <p>Hi [First Name],</p>
+                        <p>Each month, we're highlighting one quest we think every member should experience. This month, it's:</p>
+                        <p style="font-size: 1.25rem; font-weight: bold; padding: 16px; background: #f0f9ff; border-radius: 8px; text-align: center;">[Quest Name]</p>
+                        <p>And to help you get the most out of it, I'm hosting a <strong>live master class</strong> this [Day].</p>
+                        <p>As a member, you already have full access to this quest. But this class will give you:</p>
+                        <ul style="margin-left: 20px; margin-bottom: 16px;">
+                            <li>A guided introduction to the key concepts</li>
+                            <li>Live Q&A with [instructor name if applicable]</li>
+                            <li>Motivation to actually start (and finish!) the quest</li>
+                        </ul>
+                        <a href="#" class="cta-button">RSVP + Add to Calendar →</a>
+                        <p style="margin-top: 24px;"><strong>Date:</strong> [Day, Date]<br>
+                        <strong>Time:</strong> [Time] [Timezone]</p>
+                        <p>Looking forward to seeing you there.</p>
+                        <p>[Signature]</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member Email 2 -->
+            <div class="email-template">
+                <div class="email-header">
+                    <div class="email-meta">
+                        <span><strong>Email 2:</strong> Why This Quest</span>
+                        <span><strong>Send:</strong> Day 2</span>
+                        <span><strong>CTA:</strong> RSVP / Add to Calendar</span>
+                    </div>
+                </div>
+                <div class="email-body">
+                    <div class="subject">Subject: Why [Quest Name] changes everything</div>
+                    <div class="content">
+                        <p>Hi [First Name],</p>
+                        <p>I wanted to share why we chose <strong>[Quest Name]</strong> as this month's featured quest.</p>
+                        <p>[2-3 sentences about the quest's transformative potential or timely relevance]</p>
+                        <p>Here's what members have said after completing it:</p>
+                        <div style="padding: 16px; background: #f0fdf4; border-left: 4px solid #22c55e; margin: 16px 0;">
+                            <p style="margin: 0; font-style: italic;">"[Testimonial from a member]"</p>
+                            <p style="margin: 8px 0 0 0; font-size: 0.875rem;">— [Member Name]</p>
+                        </div>
+                        <p>Join me for the live class on [Day] to get a taste of what this quest offers—and the motivation to start it right after.</p>
+                        <a href="#" class="cta-button">I'll Be There →</a>
+                        <p style="margin-top: 24px;">[Signature]</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member Email 3 -->
+            <div class="email-template">
+                <div class="email-header">
+                    <div class="email-meta">
+                        <span><strong>Email 3:</strong> Day-Of Reminder</span>
+                        <span><strong>Send:</strong> Day 4 (2 hours before)</span>
+                        <span><strong>CTA:</strong> Direct Zoom Link</span>
+                    </div>
+                </div>
+                <div class="email-body">
+                    <div class="subject">Subject: See you in 2 hours! 🎯</div>
+                    <div class="content">
+                        <p>Hi [First Name],</p>
+                        <p>We're kicking off the <strong>[Quest Name]</strong> master class in just 2 hours.</p>
+                        <p>Here's your link to join:</p>
+                        <a href="#" class="cta-button">Join the Class →</a>
+                        <p style="margin-top: 24px;">After the class, you can dive right into the full quest in your app. I'll send you a direct link right after we wrap up.</p>
+                        <p>See you soon,<br>[Signature]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Social Media Posts -->
+    <section style="background: white;">
+        <div class="container">
+            <h2><span class="number">7</span> Social Media Posts</h2>
+            <p>Three posts that build momentum across the launch window.</p>
+
+            <div class="assets-grid">
+                <div class="asset-card">
+                    <div class="asset-card-header">
+                        <h4>Post 1: Announcement</h4>
+                        <span class="asset-count">Day 1</span>
+                    </div>
+                    <div class="asset-card-body">
+                        <div style="background: var(--light); padding: 20px; border-radius: 8px; font-size: 0.9375rem; line-height: 1.7;">
+                            <p style="margin-bottom: 12px;"><strong>🎓 FREE MASTER CLASS</strong></p>
+                            <p style="margin-bottom: 12px;">This [Day], I'm going live to teach you [compelling promise related to topic].</p>
+                            <p style="margin-bottom: 12px;">In this 60-minute class, you'll learn:</p>
+                            <p style="margin-bottom: 12px;">✅ [Takeaway 1]<br>
+                            ✅ [Takeaway 2]<br>
+                            ✅ [Takeaway 3]</p>
+                            <p style="margin-bottom: 12px;">Whether you're [audience segment 1] or [audience segment 2], this class will help you [desired outcome].</p>
+                            <p style="margin-bottom: 12px;"><strong>📅 [Day, Date] at [Time] [Timezone]</strong></p>
+                            <p>It's 100% free. Link in bio to save your spot. 👆</p>
+                        </div>
+                        <p style="margin-top: 16px; font-size: 0.875rem;"><strong>Visual:</strong> High-quality image of instructor or quest artwork with text overlay showing class title and date.</p>
+                    </div>
+                </div>
+
+                <div class="asset-card">
+                    <div class="asset-card-header">
+                        <h4>Post 2: Value/Social Proof</h4>
+                        <span class="asset-count">Day 2</span>
+                    </div>
+                    <div class="asset-card-body">
+                        <div style="background: var(--light); padding: 20px; border-radius: 8px; font-size: 0.9375rem; line-height: 1.7;">
+                            <p style="margin-bottom: 12px;">"[Powerful testimonial or transformation quote related to the quest topic]"</p>
+                            <p style="margin-bottom: 12px;">This is what happens when you [topic/transformation].</p>
+                            <p style="margin-bottom: 12px;">In tomorrow's free master class, I'm sharing the exact framework/techniques/insights that made this possible.</p>
+                            <p style="margin-bottom: 12px;">Over [X] people have already registered. Don't miss out.</p>
+                            <p>🔗 Link in bio to join us.</p>
+                        </div>
+                        <p style="margin-top: 16px; font-size: 0.875rem;"><strong>Visual:</strong> Testimonial card design, before/after, or carousel showing key class topics.</p>
+                    </div>
+                </div>
+
+                <div class="asset-card">
+                    <div class="asset-card-header">
+                        <h4>Post 3: Countdown/Live</h4>
+                        <span class="asset-count">Day 3-4</span>
+                    </div>
+                    <div class="asset-card-body">
+                        <div style="background: var(--light); padding: 20px; border-radius: 8px; font-size: 0.9375rem; line-height: 1.7;">
+                            <p style="margin-bottom: 12px;"><strong>🔴 [LIVE TODAY / TOMORROW]</strong></p>
+                            <p style="margin-bottom: 12px;">The [Topic] Master Class is happening in just [X hours].</p>
+                            <p style="margin-bottom: 12px;">If you've been meaning to [desired outcome], this is your sign.</p>
+                            <p style="margin-bottom: 12px;">⏰ [Time] [Timezone]<br>
+                            💰 Free<br>
+                            📍 Zoom (link in bio)</p>
+                            <p>See you there 👋</p>
+                        </div>
+                        <p style="margin-top: 16px; font-size: 0.875rem;"><strong>Visual:</strong> Stories countdown sticker, short video/reel teaser, or "going live" graphic.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Push Notifications & In-App -->
+    <section>
+        <div class="container">
+            <h2><span class="number">8</span> Push Notifications & In-App</h2>
+            <p>Touchpoints for users who already have the app installed.</p>
+
+            <div class="two-col">
+                <div>
+                    <h3>Push Notifications</h3>
+                    <div class="checklist" style="margin-top: 16px;">
+                        <div class="checklist-item">
+                            <div class="checkbox"></div>
+                            <div class="item-content">
+                                <div class="item-title">Day 1: Announcement</div>
+                                <div class="item-desc">"🎓 New Master Class: [Topic]. Join us live on [Day]. Tap to RSVP."</div>
+                            </div>
+                        </div>
+                        <div class="checklist-item">
+                            <div class="checkbox"></div>
+                            <div class="item-content">
+                                <div class="item-title">Day 3: Reminder</div>
+                                <div class="item-desc">"📅 Tomorrow: [Topic] Master Class. Don't forget to join us at [Time]!"</div>
+                            </div>
+                        </div>
+                        <div class="checklist-item">
+                            <div class="checkbox"></div>
+                            <div class="item-content">
+                                <div class="item-title">Day 4: Going Live</div>
+                                <div class="item-desc">"🔴 We're live in 1 hour! [Topic] Master Class. Tap to join."</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>In-App Elements</h3>
+                    <div class="checklist" style="margin-top: 16px;">
+                        <div class="checklist-item">
+                            <div class="checkbox"></div>
+                            <div class="item-content">
+                                <div class="item-title">Master Class of the Month Banner</div>
+                                <div class="item-desc">Persistent banner on home screen: "Master Class of the Month: [Topic] — [Date]". Links to RSVP or Zoom on day-of.</div>
+                            </div>
+                        </div>
+                        <div class="checklist-item">
+                            <div class="checkbox"></div>
+                            <div class="item-content">
+                                <div class="item-title">Live Event Card</div>
+                                <div class="item-desc">Scheduled event visible in Events section all month. Shows countdown, allows save/RSVP, sends automatic reminders.</div>
+                            </div>
+                        </div>
+                        <div class="checklist-item">
+                            <div class="checkbox"></div>
+                            <div class="item-content">
+                                <div class="item-title">Post-Class: Quest Spotlight</div>
+                                <div class="item-desc">After class ends, banner updates to: "Start [Quest Name] now →" with deep link to the quest.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: Post-Class Conversion -->
+    <section style="background: white;">
+        <div class="container">
+            <h2><span class="number">9</span> Post-Class Conversion Flow</h2>
+            <p>What happens after the class ends — this is where conversions happen.</p>
+
+            <div class="two-col" style="margin-top: 24px;">
+                <div class="flow-section">
+                    <div class="flow-header non-member">
+                        <span class="label">NON-MEMBERS</span>
+                    </div>
+                    <h4 style="margin-bottom: 16px;">Post-Class Email (Send within 2 hours)</h4>
+                    <div style="background: var(--light); padding: 20px; border-radius: 8px; font-size: 0.9375rem;">
+                        <p style="margin-bottom: 12px;"><strong>Subject:</strong> Your [Topic] class replay + special offer</p>
+                        <p style="margin-bottom: 16px;">Thanks for joining today's class! Here's your 48-hour replay access:</p>
+                        <p style="margin-bottom: 16px;"><strong>[Replay Link Button]</strong></p>
+                        <p style="margin-bottom: 12px;">Ready to go deeper? Here are your options:</p>
+                        <div style="background: white; padding: 16px; border-radius: 8px; margin-bottom: 12px;">
+                            <strong>Option 1: Get Full Membership</strong>
+                            <p style="margin: 8px 0 0 0; font-size: 0.875rem;">Access ALL 100 quests including [Quest Name]. Best value.</p>
+                        </div>
+                        <div style="background: white; padding: 16px; border-radius: 8px; margin-bottom: 12px;">
+                            <strong>Option 2: Buy Just This Quest</strong>
+                            <p style="margin: 8px 0 0 0; font-size: 0.875rem;">Get lifetime access to [Quest Name] for [Price].</p>
+                        </div>
+                        <div style="background: white; padding: 16px; border-radius: 8px;">
+                            <strong>Option 3: Explore Free Content</strong>
+                            <p style="margin: 8px 0 0 0; font-size: 0.875rem;">Download the app and explore what's available for free.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flow-section">
+                    <div class="flow-header member">
+                        <span class="label">MEMBERS</span>
+                    </div>
+                    <h4 style="margin-bottom: 16px;">Post-Class Email (Send within 2 hours)</h4>
+                    <div style="background: var(--light); padding: 20px; border-radius: 8px; font-size: 0.9375rem;">
+                        <p style="margin-bottom: 12px;"><strong>Subject:</strong> Start [Quest Name] now 🚀</p>
+                        <p style="margin-bottom: 16px;">Great class today! Now it's time to put what you learned into action.</p>
+                        <p style="margin-bottom: 16px;">Your next step: Start the full <strong>[Quest Name]</strong> quest.</p>
+                        <div style="background: white; padding: 16px; border-radius: 8px; text-align: center; margin-bottom: 16px;">
+                            <strong style="font-size: 1.125rem;">[Start Quest Button]</strong>
+                            <p style="margin: 8px 0 0 0; font-size: 0.875rem;">Opens directly in your app</p>
+                        </div>
+                        <p style="margin-bottom: 12px;">The quest includes:</p>
+                        <ul style="margin-left: 20px;">
+                            <li>[X] lessons</li>
+                            <li>[X] hours of content</li>
+                            <li>[Key feature/benefit]</li>
+                        </ul>
+                        <p style="margin-top: 16px;">Don't let today's motivation fade — start now while it's fresh.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 10: Checklist -->
+    <section>
+        <div class="container">
+            <h2><span class="number">10</span> Launch Checklist</h2>
+            <p>Use this checklist to ensure nothing is missed for each monthly launch.</p>
+
+            <div class="checklist" style="margin-top: 24px;">
+                <div class="checklist-section">
+                    <h4>📋 Pre-Launch (1 Week Before)</h4>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-content">
+                            <div class="item-title">Select featured quest for the month</div>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-content">
+                            <div class="item-title">Confirm instructor/host availability</div>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-content">
+                            <div class="item-title">Set up Zoom meeting and get link</div>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-content">
+                            <div class="item-title">Create/update landing page with new quest details</div>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-content">
+                            <div class="item-title">Prepare email copy (all 6 emails + 2 post-class)</div>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-content">
+                            <div class="item-title">Create social media graphics and copy</div>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-content">
+                            <div class="item-title">Set up in-app banner and Live Event</div>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-content">
+                            <div class="item-title">Schedule push notifications</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checklist-section">
+                    <h4>🚀 Launch Day (Day 1)</h4>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-content">
+                            <div class="item-title">Send Email 1 to general list</div>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-content">
+                            <div class="item-title">Send Email 1 to members</div>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-content">
+                            <div class="item-title">Publish Social Post 1</div>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-content">
+                            <div class="item-title">Activate in-app banner</div>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-content">
+                            <div class="item-title">Push notification 1 sent</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checklist-section">
+                    <h4>📈 Day 2</h4>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-content">
+                            <div class="item-title">Send Email 2 to general list</div>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-content">
+                            <div class="item-title">Send Email 2 to members</div>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-content">
+                            <div class="item-title">Publish Social Post 2</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checklist-section">
+                    <h4>⏰ Day 3 (Day Before)</h4>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-content">
+                            <div class="item-title">Publish Social Post 3 (countdown)</div>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-content">
+                            <div class="item-title">Push notification 2 sent</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checklist-section">
+                    <h4>🎬 Day 4 (Class Day)</h4>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-content">
+                            <div class="item-title">Send Email 3 to registrants (2 hours before)</div>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-content">
+                            <div class="item-title">Send Email 3 to members (2 hours before)</div>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-content">
+                            <div class="item-title">Push notification 3 sent (1 hour before)</div>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-content">
+                            <div class="item-title">Host live class</div>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-content">
+                            <div class="item-title">Send post-class email to non-members</div>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-content">
+                            <div class="item-title">Send post-class email to members</div>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-content">
+                            <div class="item-title">Update in-app banner to "Start Quest" CTA</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Summary Stats -->
+            <div class="summary-box">
+                <h3>Total Assets Per Launch</h3>
+                <div class="summary-stats">
+                    <div class="summary-stat">
+                        <span class="number">8</span>
+                        <span class="label">Emails</span>
+                    </div>
+                    <div class="summary-stat">
+                        <span class="number">3</span>
+                        <span class="label">Social Posts</span>
+                    </div>
+                    <div class="summary-stat">
+                        <span class="number">3</span>
+                        <span class="label">Push Notifications</span>
+                    </div>
+                    <div class="summary-stat">
+                        <span class="number">2</span>
+                        <span class="label">In-App Elements</span>
+                    </div>
+                    <div class="summary-stat">
+                        <span class="number">2</span>
+                        <span class="label">Landing Pages</span>
+                    </div>
+                    <div class="summary-stat">
+                        <span class="number">1</span>
+                        <span class="label">Live Class</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: var(--dark); color: white; padding: 40px 0; text-align: center;">
+        <div class="container">
+            <p style="color: rgba(255,255,255,0.7); margin: 0;">Monthly Master Class Launch System — Marketing Proposal</p>
+            <p style="color: rgba(255,255,255,0.5); margin: 8px 0 0 0; font-size: 0.875rem;">Created for quest engagement optimization</p>
+        </div>
+    </footer>
+</body>
+</html>

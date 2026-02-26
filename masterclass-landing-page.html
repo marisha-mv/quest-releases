@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Masterclass: Becoming a Speaker in 60 Minutes with Eric Edmeades | Mindvalley</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #fff;
+            color: #1d1d1f;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 0 24px;
+        }
+
+        .nav-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0;
+        }
+
+        .nav-logo img {
+            height: 24px;
+            filter: brightness(0) invert(1);
+        }
+
+        .nav-link {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 100px 24px 60px;
+            overflow: hidden;
+        }
+
+        .hero-media {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .hero-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(15,15,30,0.92) 0%, rgba(30,30,60,0.85) 50%, rgba(20,20,50,0.80) 100%);
+            z-index: 1;
+        }
+
+        .hero-container {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 80px;
+            align-items: center;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+        }
+
+        /* Hero Content */
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(122, 18, 212, 0.25);
+            border: 1px solid rgba(122, 18, 212, 0.4);
+            padding: 10px 18px;
+            border-radius: 100px;
+            margin-bottom: 28px;
+        }
+
+        .hero-eyebrow span {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #d8b4fe;
+        }
+
+        .hero-title {
+            font-size: 52px;
+            font-weight: 800;
+            line-height: 1.08;
+            letter-spacing: -0.03em;
+            color: #fff;
+            margin-bottom: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 36px;
+            }
+        }
+
+        .hero-description {
+            font-size: 18px;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.75);
+            margin-bottom: 36px;
+            max-width: 480px;
+        }
+
+        /* Event Details */
+        .event-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            margin-bottom: 40px;
+        }
+
+        .event-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+
+        .event-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .event-icon svg {
+            width: 22px;
+            height: 22px;
+            color: #d8b4fe;
+        }
+
+        .event-info {
+            padding-top: 2px;
+        }
+
+        .event-label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 4px;
+        }
+
+        .event-value {
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .event-sub {
+            font-size: 13px;
+            color: rgba(255,255,255,0.5);
+            margin-top: 2px;
+        }
+
+        /* Trainer Card in Hero */
+        .trainer-card-mini {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+            backdrop-filter: blur(20px);
+            padding: 16px 20px;
+            border-radius: 16px;
+            max-width: 380px;
+        }
+
+        .trainer-card-mini img {
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
+            object-fit: cover;
+        }
+
+        .trainer-card-mini h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+
+        .trainer-card-mini p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .trainer-card-mini p strong {
+            color: #d8b4fe;
+        }
+
+        /* Registration Form */
+        .registration-form-card {
+            background: #fff;
+            border-radius: 24px;
+            padding: 40px 36px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .form-header h3 {
+            font-size: 24px;
+            font-weight: 800;
+            color: #1d1d1f;
+            margin-bottom: 8px;
+        }
+
+        .form-header p {
+            font-size: 15px;
+            color: #6b7280;
+        }
+
+        .form-fields {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 18px 20px;
+            background: #f5f5f7;
+            border: 2px solid transparent;
+            border-radius: 14px;
+            font-size: 16px;
+            font-family: inherit;
+            color: #1d1d1f;
+            transition: all 0.2s;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #7A12D4;
+            background: #fff;
+        }
+
+        .form-input::placeholder {
+            color: #9ca3af;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 18px 24px;
+            background: #7A12D4;
+            color: #fff;
+            border: none;
+            border-radius: 100px;
+            font-size: 17px;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-top: 8px;
+        }
+
+        .form-submit:hover {
+            background: #6a0fb8;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(122, 18, 212, 0.35);
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .form-footer p {
+            font-size: 13px;
+            color: #9ca3af;
+            margin-bottom: 12px;
+        }
+
+        .free-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(122, 18, 212, 0.08);
+            padding: 8px 16px;
+            border-radius: 100px;
+        }
+
+        .free-badge svg {
+            width: 16px;
+            height: 16px;
+            color: #7A12D4;
+        }
+
+        .free-badge span {
+            font-size: 13px;
+            font-weight: 700;
+            color: #7A12D4;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: #f5f5f7;
+            padding: 56px 24px;
+        }
+
+        .stats-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+        }
+
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 40px;
+            font-weight: 800;
+            color: #7A12D4;
+            letter-spacing: -0.02em;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        /* What You'll Learn Section */
+        .learn-section {
+            padding: 100px 24px;
+        }
+
+        .learn-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .section-eyebrow {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #7A12D4;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: 40px;
+            font-weight: 800;
+            color: #1d1d1f;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 32px;
+            }
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: #6b7280;
+        }
+
+        .learn-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        @media (max-width: 768px) {
+            .learn-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        .learn-card {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 20px;
+            padding: 36px 32px;
+            text-align: center;
+            transition: all 0.25s;
+        }
+
+        .learn-card:hover {
+            border-color: #7A12D4;
+            box-shadow: 0 12px 40px rgba(122, 18, 212, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .learn-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #7A12D4 0%, #9333ea 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 24px;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .learn-card h4 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1d1d1f;
+            margin-bottom: 12px;
+        }
+
+        .learn-card p {
+            font-size: 15px;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        /* Trainer Section */
+        .trainer-section {
+            padding: 100px 24px;
+            background: #f5f5f7;
+        }
+
+        .trainer-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .trainer-content {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 56px;
+            align-items: start;
+        }
+
+        @media (max-width: 768px) {
+            .trainer-content {
+                grid-template-columns: 1fr;
+                gap: 32px;
+                text-align: center;
+            }
+        }
+
+        .trainer-image {
+            position: relative;
+        }
+
+        .trainer-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        @media (max-width: 768px) {
+            .trainer-image img {
+                max-width: 240px;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+
+        .trainer-bio h3 {
+            font-size: 32px;
+            font-weight: 800;
+            color: #1d1d1f;
+            margin-bottom: 8px;
+        }
+
+        .trainer-bio .role {
+            font-size: 17px;
+            color: #7A12D4;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .trainer-bio .bio-text {
+            font-size: 16px;
+            color: #6b7280;
+            line-height: 1.8;
+            margin-bottom: 28px;
+        }
+
+        .trainer-bio .bio-text strong {
+            color: #1d1d1f;
+        }
+
+        .trainer-credentials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .trainer-credentials {
+                justify-content: center;
+            }
+        }
+
+        .credential {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            padding: 10px 16px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #4b5563;
+        }
+
+        .credential svg {
+            width: 16px;
+            height: 16px;
+            color: #7A12D4;
+        }
+
+        /* Trainer Collage */
+        .trainer-collage {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 56px;
+            align-items: start;
+        }
+
+        @media (max-width: 768px) {
+            .trainer-collage {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .trainer-collage img {
+            width: 100%;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+        .trainer-collage img:nth-child(1),
+        .trainer-collage img:nth-child(2) {
+            aspect-ratio: 16/9;
+            object-position: center;
+        }
+
+        .trainer-collage img:nth-child(3),
+        .trainer-collage img:nth-child(4) {
+            aspect-ratio: 3/4;
+            object-position: top center;
+        }
+
+        /* Series Section */
+        .series-section {
+            padding: 80px 24px;
+            text-align: center;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .series-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .series-section h3 {
+            font-size: 28px;
+            font-weight: 800;
+            color: #1d1d1f;
+            margin-bottom: 16px;
+        }
+
+        .series-section p {
+            font-size: 17px;
+            color: #6b7280;
+            line-height: 1.7;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 100px 24px;
+        }
+
+        .faq-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .faq-list {
+            margin-top: 48px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 28px 0;
+            background: none;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            text-align: left;
+            font-family: inherit;
+            gap: 16px;
+        }
+
+        .faq-question h4 {
+            font-size: 17px;
+            font-weight: 600;
+            color: #1d1d1f;
+        }
+
+        .faq-toggle {
+            width: 32px;
+            height: 32px;
+            background: #f5f5f7;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6b7280;
+            font-size: 20px;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+
+        .faq-item.open .faq-toggle {
+            background: #7A12D4;
+            border-color: #7A12D4;
+            color: #fff;
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-answer p {
+            padding-bottom: 28px;
+            font-size: 16px;
+            color: #6b7280;
+            line-height: 1.7;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            padding: 100px 24px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            text-align: center;
+        }
+
+        .final-cta-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .final-cta h2 {
+            font-size: 40px;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .final-cta h2 {
+                font-size: 32px;
+            }
+        }
+
+        .final-cta p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 36px;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #7A12D4;
+            color: #fff;
+            padding: 20px 40px;
+            border-radius: 100px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .cta-button:hover {
+            background: #6a0fb8;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(122, 18, 212, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 24px;
+            background: #1d1d1f;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        footer a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+        /* Mobile Sticky CTA */
+        .mobile-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 16px 20px;
+            background: #fff;
+            border-top: 1px solid #e5e7eb;
+            z-index: 999;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 1024px) {
+            .mobile-cta {
+                display: block;
+            }
+
+            .final-cta {
+                padding-bottom: 140px;
+            }
+        }
+
+        .mobile-cta .cta-button {
+            width: 100%;
+            justify-content: center;
+            padding: 18px 24px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="https://www.mindvalley.com" class="nav-logo">
+                <img src="https://res.cloudinary.com/mindvalley/image/upload/v1640746015/mvcom/mv-logo.svg" alt="Mindvalley">
+            </a>
+            <a href="https://support.mindvalley.com" class="nav-link">Support</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-media">
+            <img src="https://storyblok-cdn.mindvalley.com/f/60579/1920x1080/6f3157d965/tse-solution.jpg" alt="">
+        </div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-eyebrow">
+                    <span>Free Masterclass</span>
+                </div>
+
+                <h1 class="hero-title">Becoming a Speaker in 60 Minutes</h1>
+
+                <p class="hero-description">Join Eric Edmeades for a free live masterclass and discover the exact framework he uses to captivate audiences on stages around the world.</p>
+
+                <div class="event-details">
+                    <div class="event-item">
+                        <div class="event-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div class="event-info">
+                            <div class="event-label">Date</div>
+                            <div class="event-value">March 20, 2026</div>
+                        </div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div class="event-info">
+                            <div class="event-label">Time</div>
+                            <div class="event-value">10:00 AM PST</div>
+                            <div class="event-sub">6:00 PM GMT · 2:00 AM SGT+1</div>
+                        </div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div class="event-info">
+                            <div class="event-label">Where</div>
+                            <div class="event-value">Live on Zoom</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="trainer-card-mini">
+                    <img src="https://storyblok-cdn.mindvalley.com/f/60579/800x1200/63d86cd9e7/eric-edmeades-2_3.jpg" alt="Eric Edmeades">
+                    <div>
+                        <h4>Eric Edmeades</h4>
+                        <p><strong>10,000+ hours on stage</strong> · Speaker Nation Founder</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Registration Form -->
+            <div class="registration-form-card" id="register">
+                <div class="form-header">
+                    <h3>Reserve Your Free Spot</h3>
+                    <p>Limited spots available for the live session</p>
+                </div>
+
+                <form class="form-fields">
+                    <input type="text" class="form-input" placeholder="Your full name" required>
+                    <input type="email" class="form-input" placeholder="Your email address" required>
+                    <button type="submit" class="form-submit">Reserve My Spot Now</button>
+                </form>
+
+                <div class="form-footer">
+                    <p>No credit card required</p>
+                    <div class="free-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        <span>100% Free</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">10,000+</div>
+                    <div class="stat-label">Hours on Stage</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4.98</div>
+                    <div class="stat-label">NPS at Mindvalley</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1M+</div>
+                    <div class="stat-label">Students Worldwide</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Countries Reached</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You'll Learn -->
+    <section class="learn-section">
+        <div class="learn-container">
+            <div class="section-header">
+                <p class="section-eyebrow">What You'll Discover</p>
+                <h2 class="section-title">Three Breakthroughs in 60 Minutes</h2>
+                <p class="section-subtitle">Practical techniques you can apply immediately</p>
+            </div>
+
+            <div class="learn-grid">
+                <div class="learn-card">
+                    <div class="learn-icon">1</div>
+                    <h4>Command Any Room</h4>
+                    <p>The mental framework elite speakers use to eliminate fear and own any stage, from boardrooms to keynotes.</p>
+                </div>
+                <div class="learn-card">
+                    <div class="learn-icon">2</div>
+                    <h4>Magnetic Presence</h4>
+                    <p>Body language and vocal techniques that command attention the moment you walk on stage.</p>
+                </div>
+                <div class="learn-card">
+                    <div class="learn-icon">3</div>
+                    <h4>Stories That Transform</h4>
+                    <p>The storytelling structure used by TED speakers to make your message unforgettable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trainer Section -->
+    <section class="trainer-section">
+        <div class="trainer-container">
+            <div class="section-header">
+                <h2 class="section-title">Meet Your Host</h2>
+            </div>
+
+            <div class="trainer-content">
+                <div class="trainer-image">
+                    <img src="https://storyblok-cdn.mindvalley.com/f/60579/800x1200/63d86cd9e7/eric-edmeades-2_3.jpg" alt="Eric Edmeades">
+                </div>
+                <div class="trainer-bio">
+                    <h3>Eric Edmeades</h3>
+                    <p class="role">International Speaker & Founder of Speaker Nation</p>
+                    <p class="bio-text">Eric went from homeless teenager to becoming <strong>one of the globe's most versatile and captivating speakers</strong>. He's toured alongside Richard Branson, Bill Clinton, and Tony Robbins. In 2018, he received a medal from the Canadian Senate for his work improving people's lives. He's the creator of <strong>Behavioral Change Dynamics</strong> and the founder of <strong>Speaker Nation</strong>.</p>
+                    <div class="trainer-credentials">
+                        <span class="credential">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Featured on Forbes, Inc., CNN
+                        </span>
+                        <span class="credential">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Canadian Senate Medal Recipient
+                        </span>
+                        <span class="credential">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Award-Winning Entrepreneur
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Photo Collage -->
+            <div class="trainer-collage">
+                <img src="https://storyblok-cdn.mindvalley.com/f/60579/1000x563/ec6324d66e/tse_trainer-collage-left-top.jpg" alt="Eric Edmeades on stage">
+                <img src="https://storyblok-cdn.mindvalley.com/f/60579/1000x563/6ec2516c30/tse_trainer-collage-left-bottom.jpg" alt="Eric Edmeades speaking">
+                <img src="https://storyblok-cdn.mindvalley.com/f/60579/810x1080/b2de00a9fd/tse_trainer-collage-middle.jpeg" alt="Eric Edmeades portrait">
+                <img src="https://storyblok-cdn.mindvalley.com/f/60579/810x1080/9e9f029979/tse_trainer-collage-right.jpg" alt="Eric Edmeades presenting">
+            </div>
+        </div>
+    </section>
+
+    <!-- Series Section -->
+    <section class="series-section">
+        <div class="series-container">
+            <p class="section-eyebrow">About This Series</p>
+            <h3>Masterclass of the Month</h3>
+            <p>Every month, we spotlight one transformational quest from Mindvalley's library of 100+ programs. Join us live for a free deep-dive with the world's best teachers.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="faq-container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                        <h4>Is this really free?</h4>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, 100% free. No credit card required. This is a live masterclass open to everyone who wants to improve their speaking abilities.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                        <h4>What if I can't attend live?</h4>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We highly recommend attending live to participate in the Q&A with Eric. If you can't make it, register anyway and we'll send you a special offer to access the full Stage Effect quest.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                        <h4>Do I need any speaking experience?</h4>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No prior experience needed. Whether you're terrified of public speaking or already presenting regularly, you'll gain valuable insights from Eric's 10,000+ hours of stage experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="final-cta-container">
+            <h2>Ready to Transform Your Speaking?</h2>
+            <p>Join Eric and thousands of others for this free live masterclass.</p>
+            <a href="#register" class="cta-button">Reserve My Spot Now →</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Mindvalley · <a href="https://www.mindvalley.com/privacy">Privacy Policy</a> · <a href="https://www.mindvalley.com/terms">Terms of Use</a></p>
+    </footer>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="mobile-cta">
+        <a href="#register" class="cta-button">Reserve My Spot Now →</a>
+    </div>
+</body>
+</html>

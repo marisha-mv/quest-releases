@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest Releases - Marketing Hub</title>
+    <style>
+        :root {
+            --primary: #7c3aed;
+            --primary-dark: #6d28d9;
+            --secondary: #10b981;
+            --accent: #f59e0b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --border: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--dark) 0%, #334155 100%);
+            color: white;
+            padding: 60px 0;
+        }
+
+        header .badge {
+            display: inline-block;
+            background: rgba(124, 58, 237, 0.3);
+            color: #c4b5fd;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.125rem;
+            opacity: 0.8;
+            max-width: 600px;
+        }
+
+        /* Main Content */
+        main {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 1rem;
+            color: var(--gray);
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        /* Proposal Cards */
+        .proposals-grid {
+            display: grid;
+            gap: 24px;
+        }
+
+        .proposal-card {
+            background: white;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .proposal-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 8px 30px rgba(124, 58, 237, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .proposal-card-inner {
+            display: flex;
+            align-items: stretch;
+        }
+
+        .proposal-icon {
+            width: 120px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            flex-shrink: 0;
+        }
+
+        .proposal-icon.secondary {
+            background: linear-gradient(135deg, var(--secondary) 0%, #059669 100%);
+        }
+
+        .proposal-content {
+            padding: 24px 28px;
+            flex: 1;
+        }
+
+        .proposal-content .status {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .status.active {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .status.dna {
+            background: #ede9fe;
+            color: #5b21b6;
+        }
+
+        .status.draft {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .status.upcoming {
+            background: #e0e7ff;
+            color: #3730a3;
+        }
+
+        .proposal-content h3 {
+            font-size: 1.375rem;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+
+        .proposal-content p {
+            color: var(--gray);
+            font-size: 0.9375rem;
+            margin-bottom: 16px;
+        }
+
+        .proposal-meta {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .proposal-meta span {
+            font-size: 0.8125rem;
+            color: var(--gray);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .proposal-meta span strong {
+            color: var(--dark);
+        }
+
+        .arrow {
+            width: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--border);
+            font-size: 1.5rem;
+            transition: all 0.2s ease;
+        }
+
+        .proposal-card:hover .arrow {
+            color: var(--primary);
+            transform: translateX(4px);
+        }
+
+        /* Quick Links */
+        .quick-links {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
+        }
+
+        .quick-links h3 {
+            font-size: 1rem;
+            color: var(--gray);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .quick-link {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.2s ease;
+        }
+
+        .quick-link:hover {
+            border-color: var(--primary);
+            background: #f5f3ff;
+        }
+
+        .quick-link .icon {
+            width: 40px;
+            height: 40px;
+            background: var(--light);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        .quick-link span {
+            font-weight: 500;
+        }
+
+        /* Empty State for Future */
+        .coming-soon {
+            background: white;
+            border: 2px dashed var(--border);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            color: var(--gray);
+        }
+
+        .coming-soon h4 {
+            font-size: 1.125rem;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            color: var(--gray);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.75rem;
+            }
+
+            .proposal-card-inner {
+                flex-direction: column;
+            }
+
+            .proposal-icon {
+                width: 100%;
+                height: 80px;
+            }
+
+            .arrow {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="badge">Marketing Hub</div>
+            <h1>Quest Releases</h1>
+            <p>Marketing playbooks, DNA documents, and campaign frameworks for quest promotions and membership growth.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="section-title">Playbooks & DNA</div>
+
+            <div class="proposals-grid">
+                <!-- Quest Promotions DNA -->
+                <a href="quest-promotions-dna.html" class="proposal-card">
+                    <div class="proposal-card-inner">
+                        <div class="proposal-icon">📖</div>
+                        <div class="proposal-content">
+                            <span class="status dna">DNA Document</span>
+                            <h3>Quest Promotions DNA</h3>
+                            <p>The definitive playbook for how we promote quests through Masterclass of the Month. Covers positioning, email strategy, social strategy, in-app promotion, landing page structure, and launch timelines.</p>
+                            <div class="proposal-meta">
+                                <span><strong>2</strong> User Flows</span>
+                                <span><strong>8</strong> Email Templates</span>
+                                <span><strong>3</strong> Social Frameworks</span>
+                                <span><strong>4</strong> Day Timeline</span>
+                            </div>
+                        </div>
+                        <div class="arrow">→</div>
+                    </div>
+                </a>
+
+                <!-- Masterclass Landing Page -->
+                <a href="masterclass-landing-page.html" class="proposal-card">
+                    <div class="proposal-card-inner">
+                        <div class="proposal-icon secondary">🎤</div>
+                        <div class="proposal-content">
+                            <span class="status active">Landing Page</span>
+                            <h3>Masterclass Landing Page</h3>
+                            <p>Production-ready landing page template for Masterclass of the Month. Currently configured for Stage Effect with Eric Edmeades. Swap content for each monthly launch.</p>
+                            <div class="proposal-meta">
+                                <span>Registration Form</span>
+                                <span>Trainer Bio</span>
+                                <span>Photo Collage</span>
+                                <span>Mobile Optimized</span>
+                            </div>
+                        </div>
+                        <div class="arrow">→</div>
+                    </div>
+                </a>
+
+                <!-- Placeholder for Future -->
+                <div class="coming-soon">
+                    <h4>More Playbooks Coming Soon</h4>
+                    <p>Additional frameworks for seasonal campaigns, product launches, and partnership promotions.</p>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="quick-links">
+                <h3>Resources</h3>
+                <div class="links-grid">
+                    <a href="#" class="quick-link">
+                        <div class="icon">📧</div>
+                        <span>Email Templates</span>
+                    </a>
+                    <a href="#" class="quick-link">
+                        <div class="icon">📱</div>
+                        <span>Social Templates</span>
+                    </a>
+                    <a href="#" class="quick-link">
+                        <div class="icon">🎨</div>
+                        <span>Brand Assets</span>
+                    </a>
+                    <a href="#" class="quick-link">
+                        <div class="icon">📊</div>
+                        <span>Analytics</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Quest Releases — Marketing Hub</p>
+        </div>
+    </footer>
+</body>
+</html>
